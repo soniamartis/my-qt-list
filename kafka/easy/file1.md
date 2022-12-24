@@ -5,4 +5,6 @@
 5. Can multiple consumer groups subscribe to a topic 
 7. What happens if we have 3 partitions in a topic and 4 consumers
 8. What happens if we have 3 partitions in a topic and 2 consumers
-9. What happens to existing consumers if we have multiple consumers in a group and a new consumer is added/removed ?
+9. Can two consumers within the same consumer group consume messages from the same partition ? why not ?
+10. Can two consumers in different consumer groups consume messages from the same partition ?
+11. What happens to existing consumers if we have multiple consumers in a group and a new consumer is added/removed ?
