@@ -3,6 +3,7 @@
 3. What will happen if we set the replication factor to 4 and min ISR to 3 and 2 brokers are unavailable
 4. What is a consumer group in kafka 
 5. Can multiple consumer groups subscribe to a topic 
+6. Is there a relation between the number of partitions in a topic and the # of consumers in a consumer group ?
 7. What happens if we have 3 partitions in a topic and 4 consumers
 8. What happens if we have 3 partitions in a topic and 2 consumers
 9. Can two consumers within the same consumer group consume messages from the same partition ? why not ?
