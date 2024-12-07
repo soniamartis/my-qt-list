@@ -73,6 +73,19 @@ int partition(int []arr, int low, int high){
         return -1;
 ```
 
+### Kadane's algorithm
+- Used to find max subarray sum
+```java
+        int maxSoFar = arr[0];
+        int currMax = arr[0];
+        for(int i=1;i<arr.length;i++){
+            currMax = Math.max(arr[i], arr[i]+ currMax);
+            maxSoFar = Math.max(currMax,maxSoFar); 
+        }
+        
+        return maxSoFar;
+```  
+
 
 
 ### Important java methods in arrays
