@@ -26,3 +26,6 @@ return cnt;
 }
 ```
 
+### Divisors
+- Iterate from 1 to sqrt(n) and if i is a divisor, then n/i is also a divisor, so we dont need to iterate all the way from 1 to n, but only from 1 to sqrt(n)
+
