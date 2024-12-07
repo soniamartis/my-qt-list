@@ -45,6 +45,34 @@ int partition(int []arr, int low, int high){
 
 ```
 
+### Moore's voting algo
+- Used to find the majority element
+- eg1: [2,2,2,2,4,5,6]
+- In this example, 3 of the 2's are offset by rest of the numbers and yet 2 stays in majority by 1
+```java
+        int count = 0;
+        int num = -1;
+        for(int i=0;i<arr.length;i++){
+            if(count==0){
+                num = arr[i];
+                count++;
+            }
+            else{
+                if(arr[i]==num){
+                    count++; // increase the count of 2
+                }
+                else{
+                    count--; // offset the count of 2 if the current number is not 2
+                }
+            }
+        }
+        
+        if(isMajority(num, arr)){ // check is required for validation
+            return num;
+        }
+        return -1;
+```
+
 
 
 ### Important java methods in arrays
