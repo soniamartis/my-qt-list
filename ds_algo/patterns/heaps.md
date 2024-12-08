@@ -6,6 +6,7 @@
 
 ## How to identify its heap problem
 - Kth largest/ smallest -> means a heap of K elements
+- If u find urself creating a PQ of N elements instead of K, then might as well just sort the array, as its the same time complexity and better space complexity than a PQ
 
 
 
