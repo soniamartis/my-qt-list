@@ -13,3 +13,16 @@
 ### Kth largest
 - In a min-heap of K elements, the element at the root is the smallest in the grp of K elements
 
+
+### Java methods
+- Default Min heap
+```java 
+Queue<Integer> pq =  new PriorityQueue<>();
+```
+- Max heap
+``` java
+Queue<Integer> pq =  new PriorityQueue<>(Collections.reverseOrder());
+```
+ 
+
+
