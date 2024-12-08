@@ -94,6 +94,9 @@ int partition(int []arr, int low, int high){
 - Copies elements from source array to destination array with startIndex of source, startIndex of destination and number of elements
 - System.arraycopy(sourceArr, 0, destArr, l,sourceArr.length)
 
+#### Arrays.copyOfRange(arr,0,arr.length)
+- Creates copy of an array from the specified range
+
 
 ### Arrays Extra information
 - Java uses TimSort which is a combination of insertion sort and merge sort and is a stable sorting algorithm
