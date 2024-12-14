@@ -42,8 +42,9 @@
 - More suited for problems where u have to explore all paths 
 
 ### Backtracking
-- DFS works on a prebuitl tree, whereeas in backtracking, we have to dynamically create the tree based on decisions made along the way
+- DFS works on a prebuilt tree, whereeas in backtracking, we have to dynamically create the tree based on decisions made along the way
 - When we hit a dead end and do not find the solution, we backtrack to the previoud decision and take another path
 
 ### Priority Queue
-- 
+- Used for finding top K, K largest and K smallest elements
+- Min heap -> K largest and max heap -> K smallest
