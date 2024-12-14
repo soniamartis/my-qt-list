@@ -32,7 +32,8 @@
 ### BFS
 - Used to explore nodes in a graph/ tree by level
 - Starts with the root and explores all its immediate neighbors first before going to the next neighbors's neighbors
-- To make sure we do not revisit the nodes again, BFS uses a queue
+- To make sure we do not revisit the nodes again, BFS uses a visited array
+- To traverse the direct neighbors before the neighbors' neighbors, we use Queue
 - This queue contains nodes that are closest to the root and move outward
 - Best for finding shortest path
 
