@@ -1,5 +1,7 @@
 # Patterns
 
+## TODO : add templates for each pattern
+
 ## Linear Patterns
 - used on linear data structures like arrays, linked lists adn strings
 
@@ -28,4 +30,20 @@
 - Since graphs can have cycles, we need a visited set to keep track of nodes we already visited
 
 ### BFS
+- Used to explore nodes in a graph/ tree by level
+- Starts with the root and explores all its immediate neighbors first before going to the next neighbors's neighbors
+- To make sure we do not revisit the nodes again, BFS uses a queue
+- This queue contains nodes that are closest to the root and move outward
+- Best for finding shortest path
+
+### DFS
+- While BFS goes level by level, DFS goes deep, fully exploring one path (root to leaf) before going to the next path
+- In contrast to BFS, DFS uses a stack, its usually the call stack
+- More suited for problems where u have to explore all paths 
+
+### Backtracking
+- DFS works on a prebuitl tree, whereeas in backtracking, we have to dynamically create the tree based on decisions made along the way
+- When we hit a dead end and do not find the solution, we backtrack to the previoud decision and take another path
+
+### Priority Queue
 - 
