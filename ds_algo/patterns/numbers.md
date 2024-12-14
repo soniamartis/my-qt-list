@@ -1,7 +1,5 @@
 # Patterns
 
-##Numbers
-
 ### Prime numbers
 - Divisible by itself and 1
 - To find if a number is prime or not, we need to find if the number is divisible by any numbers less than or equal to its sqrt.
