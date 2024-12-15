@@ -1,7 +1,7 @@
 # Graphs
 
 ## Notes
-- In both graph travesals BFS and DFS, we need to maintain visited array to make sure we are not visiting the same node twice, esp. for undirected graphs
+- In both graph traversals BFS and DFS, we need to maintain visited array to make sure we are not visiting the same node twice, esp. for undirected graphs
 
 ### BFS Pattern
 - Best for finding nodes closest from root
@@ -39,6 +39,25 @@ private void dfs(int u,ArrayList<ArrayList<Integer>> adj, Set<Integer> visited, 
         }
 }
 ```
+
+### Find 4 adjacent neighbors in matrix
+```java
+int [][]directions = {{0,-1},{-1,0},{0,1},{1,0}}; // W, N, E, S
+for(int[] dir: directions){
+  int i = pos.i + dir[0];
+  int j = pos.j + dir[1];
+}
+```
+
+### Find 8 adjacent neighbors in matrix
+```java
+int [][]directions = {{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}}; // top row, current row, bottom row
+for(int[] dir: directions){
+  int i = pos.i + dir[0];
+  int j = pos.j + dir[1];
+}
+
+
   
 
 ### Components
