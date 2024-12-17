@@ -83,7 +83,26 @@ private boolean dfs(int u, ArrayList<ArrayList<Integer>> adj,boolean [] visited,
         stack.remove(u);
         return false;
     }
-```  
+```
+
+### Cycle detection in undirected graph
+- Same as the above, except that we should not consider chil-> parent edge as backedge
+```java
+private boolean dfs(int u, int parent,ArrayList<ArrayList<Integer>> adj,boolean[] visited, Set<Integer> stack ){
+        visited[u] = true;
+        if(stack.contains(u)){
+         return true;   
+        }
+        stack.add(u);
+        for(Integer v: adj.get(u)){
+            if(v != parent && dfs(v,u,adj,visited,stack)){
+                return true;
+            }
+        }
+        stack.remove(u);
+        return false;
+    }
+```
   
 
 
