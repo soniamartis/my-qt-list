@@ -2,6 +2,7 @@
 
 ## Notes
 - In both graph traversals BFS and DFS, we need to maintain visited array to make sure we are not visiting the same node twice, esp. for undirected graphs
+- In BFS, check visited before adding to queue, in DFS, check visited before adding to recursion stack
 - In flood-fill/ dfs, if we are updating the input matrix inplace with a new color, that itself serves as a visited, so no new visited is required.
 - If we cannot update in-place, then visited will be required
 
