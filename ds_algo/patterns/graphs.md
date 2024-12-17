@@ -59,6 +59,32 @@ for(int[] dir: directions){
   int i = pos.i + dir[0];
   int j = pos.j + dir[1];
 }
+```
+
+### Cycle detection in directed graph
+- There is a cycle in directed graph if there is a back-edge, ie, an edge from current node to ancestor node
+- This means, if the recursion stack contains the ancestor node while running dfs, a cycle is found
+- Here visited is just used to track whether all disjoint components are visited or not, and is not used for cycle detection
+- For cycle detection, we use a separate set that contains nodes that were visited in the current dfs
+
+```java
+private boolean dfs(int u, ArrayList<ArrayList<Integer>> adj,boolean [] visited,Set<Integer> stack){
+        visited[u] = true;
+        if(stack.contains(u)){
+            // cycle detected
+            return true;
+        }
+        stack.add(u);
+        for(Integer v: adj.get(u)){
+            if(dfs(v, adj, visited, stack)){
+             return true;   
+            }
+        }
+        stack.remove(u);
+        return false;
+    }
+```  
+  
 
 
   
