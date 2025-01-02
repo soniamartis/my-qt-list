@@ -89,6 +89,20 @@ while(!queue.isEmpty()){
 - Right: level order traversal
 - Bottom: horizontal distance pattern + level order traversal: pick the last element in level order traversal for a given horizontal distance
 
-## K-Distance nodes in binary tree
-- Create child to parent mapping to obtain immediate neighbors of node. We can get left and right, but for parent, we need extra mapping 
+## Neighbors of node in binary tree
+- The left and right nodes and the parent node are considered neigbors of a node in binary tree
+- The left and right are easily available from the node structure
+- To get the parent, create a child to parent map
+```java
+private static void populateChildToParentMap(Node root,Node parent, Map<Node, Node> childToParentMap){
+      if(root == null){
+          return;
+      }  
+      childToParentMap.put(root,parent);
+      populateChildToParentMap(root.left, root,childToParentMap);
+      populateChildToParentMap(root.right, root,childToParentMap);
+      
+    }
+
+```
 
