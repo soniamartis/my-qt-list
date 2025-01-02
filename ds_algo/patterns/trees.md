@@ -80,13 +80,12 @@ while(!queue.isEmpty()){
 - Postorder: left -> right -> parent (recursion)
 - Level order: Traverse every level , use queue DS
 - ZigZag: use 2 stacks with a flag to indicate direction
-- Vertical: use queue and map. When u go left, do height-1 and when u go right, do height+1. Height of root is 0. Use map to store all nodes with same height
+- Vertical: Use horizontal distance pattern
 - Boundary:
 
 ## View Patterns
-Algorithm for
-- Top: compute horizontal distance
-- Left:
-- Right:
-- Bottom:
+- Top:  horizontal distance pattern + level order traversal: pick the first element in level order traversal for a given horizontal distance
+- Left: level order traversal
+- Right: level order traversal
+- Bottom: horizontal distance pattern + level order traversal: pick the last element in level order traversal for a given horizontal distance
 
