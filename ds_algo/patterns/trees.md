@@ -107,6 +107,25 @@ private static void populateChildToParentMap(Node root,Node parent, Map<Node, No
 ```
 
 ## Tree construction from traversals
-- Preorder always points to the root
+- Preorder 0 to length-1 arrangement always points to the root , then root of left, then root of right
+- Postorder length-1 to 0 arrangement always points to the root, root of right , then root of left
 - InOrder helps to identify what elements lie to the left and right of the root
+
+ ```java
+private static Node buildTree(int[] inorder, int[] preorder,Index index, int low, int high){
+        if(high<low){
+            return null;
+        }
+       int rootLocation = find(inorder, preorder[index.value]);
+       if(rootLocation >= low && rootLocation <=high){
+           Node root = new Node(preorder[index.value]);
+           index.value++;
+           root.left = buildTree(inorder, preorder,index,low,rootLocation-1);
+           root.right = buildTree(inorder, preorder,index,rootLocation+1, high);
+           return root;
+          
+       }
+       return null;
+    }
+``` 
 
