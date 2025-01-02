@@ -42,6 +42,38 @@
 - eg2: Diameter of tree, here we need to again store heights at each node
 - eg3: Max path sum: store the sums of the sub-trees
 
+## Horizontal distance pattern
+- Horizontal Distance from the root of the tree
+- Can be computed using a queue
+```java
+class TreeNode{
+  Node node;
+  int hd;
+
+  TreeNode(Node node){
+    this.node = node;
+  }
+
+  TreeNode(Node node, int hd){
+   this.node = node;
+   this.height = height;
+ }
+}
+
+Queue<TreeNode> queue = new LinkedList<>();
+queue.add(new TreeNode(root));
+
+while(!queue.isEmpty()){
+  TreeNode temp = queue.poll();
+  if(temp.node.left != null){
+    queue.add(new TreeNode(temp.node.left, temp.node.height-1));
+ }
+ if(temp.node.right != null){
+  queue.add(new TreeNode(temp.node.right, temp.node.height+1));
+ }
+}
+```
+
 ## Traversal patterns
 - Inorder: left -> parent -> right (recursion)
 - Preorder: parent -> left -> right (recursion)
@@ -52,7 +84,8 @@
 - Boundary:
 
 ## View Patterns
-- Top:
+Algorithm for
+- Top: compute horizontal distance
 - Left:
 - Right:
 - Bottom:
