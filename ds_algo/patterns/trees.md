@@ -89,3 +89,6 @@ while(!queue.isEmpty()){
 - Right: level order traversal
 - Bottom: horizontal distance pattern + level order traversal: pick the last element in level order traversal for a given horizontal distance
 
+## K-Distance nodes in binary tree
+- Create child to parent mapping to obtain immediate neighbors of node. We can get left and right, but for parent, we need extra mapping 
+
