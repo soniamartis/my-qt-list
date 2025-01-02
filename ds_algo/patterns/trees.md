@@ -42,7 +42,7 @@
 - eg2: Diameter of tree, here we need to again store heights at each node
 - eg3: Max path sum: store the sums of the sub-trees
 
-## Horizontal distance pattern
+## Horizontal distance pattern (HD pattern)
 - Horizontal Distance from the root of the tree
 - Can be computed using a queue
 ```java
@@ -81,7 +81,7 @@ while(!queue.isEmpty()){
 - Level order: Traverse every level , use queue DS
 - ZigZag: use 2 stacks with a flag to indicate direction
 - Vertical: Use horizontal distance pattern
-- Boundary:
+- Boundary: traverse left boundary, traverse leaf nodes, traverse right boundary, do not use HD pattern, rather use a linkedhashSet to make sure the same node is not processed twice in output
 
 ## View Patterns
 - Top:  horizontal distance pattern + level order traversal: pick the first element in level order traversal for a given horizontal distance
