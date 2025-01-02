@@ -106,3 +106,7 @@ private static void populateChildToParentMap(Node root,Node parent, Map<Node, No
 
 ```
 
+## Tree construction from traversals
+- Preorder always points to the root
+- InOrder helps to identify what elements lie to the left and right of the root
+
