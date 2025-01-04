@@ -26,3 +26,18 @@ https://leetcode.com/studyplan/top-interview-150/
        }
     }
 ```
+
+## Min absolute diff in BST
+- In BST, min diff is just the diff between the nodes in inorder traversal
+```java
+private void inorder(TreeNode root){
+        if(root != null){
+            inorder(root.left);
+            if(prev !=null && root.val - prev.val < minDiff){
+                minDiff = root.val - prev.val;
+            }
+            prev = root;
+            inorder(root.right);
+        }
+    }
+```
